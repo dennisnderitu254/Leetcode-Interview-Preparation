@@ -41,3 +41,42 @@ Constraints:
 
 - `1 <= word1.length, word2.length <= 100`
 - `word1` and `word2` consist of lowercase English letters.
+
+### Solution
+
+```
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: str
+        """
+        merged = []
+        i, j = 0, 0
+
+        while i < len(word1) and j < len(word2):
+            merged.append(word1[i])
+            merged.append(word2[j])
+            i += 1
+            j += 1
+
+        #Append the remaining letters from word1
+        while i < len(word1):
+            merged.append(word1[i])
+            i += 1
+
+        #Append the remaining letters from word2
+        while j < len(word2):
+            merged.append(word2[j])
+            j += 1
+
+        return ''.join(merged)
+
+# Example Usage
+# word1 = "abc"
+# word2 = "pqr"
+# solution = Solution()
+# output = solution.mergeAlternately(word1, word2)
+# print(output)
+```
