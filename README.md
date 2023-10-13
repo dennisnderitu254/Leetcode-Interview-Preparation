@@ -80,3 +80,23 @@ class Solution(object):
 # output = solution.mergeAlternately(word1, word2)
 # print(output)
 ```
+
+**Explanation 1**
+
+This code defines a class `Solution` with a method `mergeAlternately` that takes two input strings `word1` and `word2` and returns the merged string according to the specified alternating order.
+
+The code uses two pointers (`i` and `j`) to iterate through the characters of both words and alternately appends them to the `merged` list.
+
+After one of the words is exhausted, the code appends the remaining characters from the other word.
+
+Finally, the `merged` list is joined into a string and returned as the output.
+
+**Explanation2**
+
+This code defines a class called `Solution` with a method called `mergeAlternately()`. This method takes two strings, `word1` and `word2`, as input and returns a new string that is created by merging the two strings alternately.
+
+The method works by first creating an empty list called `merged`. Then, it uses two pointers, `i` and `j`, to iterate over the two strings. While both pointers are within the bounds of their respective strings, the method appends the characters at those positions to the `merged` list.
+
+Once both pointers have reached the end of their respective strings, the method checks to see if either string has any remaining characters. If so, it appends those characters to the `merged` list.
+
+Finally, the method returns a new string that is created by joining the characters in the `merged` list together.
